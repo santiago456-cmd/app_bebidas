@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Variable CSS para fondo */
+  --bg-header: url("/bg.jpg");
+}
+
+/* Luego creas tu utilidad manualmente */
+@layer utilities {
+  .bg-header {
+    background-image: var(--bg-header);
+  }
+}
+
+
+@layer utilities {
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 1s ease-in-out infinite;
+  }
+}
